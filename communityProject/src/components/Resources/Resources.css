@@ -1,0 +1,30 @@
+:root {
+  --main-color: #4aa8f4;
+  --font-family: 'Times New Roman', Times, serif;
+}
+
+.resources-title {
+  font-family: var(--font-family);
+  text-align: center;
+}
+
+.card-title {
+  font-family: var(--font-family);
+  font-weight: bold;
+}
+
+.card-text {
+  font-family: var(--font-family);
+}
+
+.resources-section {
+  width: 100%;
+  /* Ensure that the resources section doesn't shrink */
+  padding: 40px 0;
+  /* Add spacing as needed */
+}
+
+.resources-title {
+  font-size: 1.8rem;
+  text-align: center;
+}
