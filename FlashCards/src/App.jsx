@@ -1,35 +1,40 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+// src/App.jsx
+import "./App.css";
+import FlashCard from "./components/FlashCard";
+import  { useState } from "react";
 
 function App() {
-  const [count, setCount] = useState(0)
+  const flashcards = [
+    {
+      question: "What is React?",
+      answer: "A JavaScript library for building user interfaces",
+    },
+    {
+      question: "What is JSX?",
+      answer: "A syntax extension for JavaScript used in React",
+    },
+    {
+      question: "What is a component?",
+      answer: "Reusable piece of UI logic in React",
+    },
+  ];
+
+  const [currentCardIndex, setCurrentCardIndex] = useState(0);
+
+  const handleNextCard = () => {
+    setCurrentCardIndex((prevIndex) => (prevIndex + 1) % flashcards.length);
+  };
 
   return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+    <div className="app">
+      <h1>Flash Cards</h1>
+      <FlashCard
+        question={flashcards[currentCardIndex].question}
+        answer={flashcards[currentCardIndex].answer}
+        onNextCard={handleNextCard}
+      />
+    </div>
+  );
 }
 
-export default App
+export default App;
