@@ -1,0 +1,101 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+  
+}
+body{
+    background: url('./assets/pexels-pixabay-2150.jpg');
+}
+.app {
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 20px;
+}
+.nasa-dashboard {
+
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+.date-picker {
+  margin: 20px;
+}
+
+.pictures-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  width: 100%;
+  max-width: 1200px;
+  margin-top: 20px;
+}
+
+.picture-card {
+  width: 90%;
+  max-width: 250px;
+  border-radius: 15px;
+  background: rgba(0, 0, 0, 0.7);
+  padding: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  color: white;
+  position: relative;
+  text-align: center;
+}
+
+.temperature-overlay {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background: rgba(255, 255, 255, 0.3);
+  padding: 5px 10px;
+  border-radius: 10px;
+  font-size: 1.2em;
+  color: black;
+}
+
+.picture {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.picture-details {
+  margin-top: 10px;
+  text-align: center;
+  font-size: 0.9em;
+}
+
+@media (max-width: 768px) {
+  .pictures-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .picture-card {
+    width: 100%;
+    max-width: 350px;
+  }
+}
+
+@media (max-width: 480px) {
+  .date-picker {
+    width: 100%;
+  }
+
+  .temperature-overlay {
+    font-size: 1em;
+  }
+
+  .picture-details {
+    font-size: 0.8em;
+  }
+}

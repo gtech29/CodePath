@@ -1,0 +1,22 @@
+.sidebar {
+  width: 20%;
+  min-width: 200px;
+  background: rgba(0, 0, 0, 0.8);
+  padding: 20px;
+  border-radius: 15px;
+  color: white;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  height: 100vh;
+  box-sizing: border-box;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+.date-picker {
+  margin-top: 20px;
+}

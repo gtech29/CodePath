@@ -1,0 +1,92 @@
+.nasa-dashboard {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: 20px;
+  color: whitesmoke;
+}
+
+.sidebar {
+  width: 50%;
+  min-width: 200px;
+  background: rgba(0, 0, 0, 0.8);
+  padding: 20px;
+  border-radius: 15px;
+  color: white;
+  text-align: center;
+    display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      height: 100vh;
+      box-sizing: border-box;
+}
+
+.date-picker {
+  margin-top: 20px;
+}
+
+
+.pictures-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  width: 75%;
+  max-width: 1200px;
+  margin-top: 20px;
+}
+
+.picture-card {
+  width: 100%;
+  max-width: 400px;
+  border-radius: 15px;
+  background: rgba(0, 0, 0, 0.7);
+  padding: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  color: white;
+  position: relative;
+  text-align: center;
+  padding: 20px;
+}
+
+.picture {
+  width: 100%;
+  height: auto;
+}
+
+.picture-details {
+  margin-top: 10px;
+  text-align: left;
+  font-size: 0.9em;
+}
+
+@media (max-width: 768px) {
+  .nasa-dashboard {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .pictures-grid {
+    width: 100%;
+  }
+
+  .sidebar {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .date-picker {
+    width: 100%;
+  }
+
+  .temperature-overlay {
+    font-size: 1em;
+  }
+
+  .picture-details {
+    font-size: 0.8em;
+  }
+}
