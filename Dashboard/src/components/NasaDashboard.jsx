@@ -13,13 +13,14 @@ const NasaDashboard = () => {
     const fetchPictures = async () => {
       try {
         const params = {
-          api_key: "oxj4gQcTCUQTGdpQlSKZ63Q6nD5APEITTrylxBjN", // Replace with your actual NASA API key
+          api_key: import.meta.env.VITE_NASA_API_KEY,
         };
         if (selectedDate) {
           params.date = selectedDate; // Use the selected date to fetch a specific picture
         } else {
           params.count = 10; // Fetch multiple images if no date is selected
         }
+        console.log(import.meta.env.VITE_NASA_API_KEY);
 
         const response = await axios.get(
           "https://api.nasa.gov/planetary/apod",
